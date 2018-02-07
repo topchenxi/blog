@@ -1,0 +1,26 @@
+{
+  "name": "myweb",
+  "version": "1.0.0",
+  "description": "aaaa",
+  "main": "config.js",
+  "author": "c.c.",
+  "license": "ISC",
+  "homepage": "https://github.com/topchenxi/myweb#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.3.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^8.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.0"
+  }
+}
