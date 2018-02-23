@@ -1,6 +1,6 @@
 # string
 
-## string api
+## string 定义
 ```javascript
 // String 对象
 // String 对象用于处理文本（字符串）。
@@ -15,104 +15,77 @@ var str2 = String(s);
 // String 对象属性
 var str = new String("Hello World!");
 console.log(str.length);
+```
 
-// String 对象方法
+## String 对象方法
+```javascript
 // anchor()	    创建 HTML 锚。
-console.log(str.anchor());
-
+str.anchor()
 // big()	    用大号字体显示字符串。
-console.log(str.big());
-
+str.big()
 // blink()	    显示闪动字符串。
-console.log(str.blink());
-
+str.blink()
 // bold()	    使用粗体显示字符串。
-console.log(str.bold());
-
+str.bold()
 // fontcolor()	使用指定的颜色来显示字符串。
-console.log(str.fontcolor('#e50000'));
-
+str.fontcolor('#e50000')
 // fontsize()	使用指定的尺寸来显示字符串。
-// console.log(str.fontsize('14'));
-
+// str.fontsize('14')
 // italics()	使用斜体显示字符串。
-console.log(str.italics());
-
+str.italics()
 // link()	    将字符串显示为链接。
-console.log(str.link());
-
+str.link()
 // small()	    使用小字号来显示字符串。
-console.log(str.small());
-
+str.small()
 // strike()	    使用删除线来显示字符串。
-console.log(str.strike());
-
+str.strike()
 // sub()	    把字符串显示为下标。
-console.log(str.sub());
-
+str.sub()
 // sup()	    把字符串显示为上标。
-console.log(str.sup());
-
+str.sup()
 // toLocaleLowerCase()	把字符串转换为小写。
-console.log(str.toLocaleLowerCase());
-
+str.toLocaleLowerCase()
 // toLocaleUpperCase()	把字符串转换为大写。
-console.log(str.toLocaleUpperCase());
-
+str.toLocaleUpperCase()
 // toLowerCase()	    把字符串转换为小写。
-console.log(str.toLowerCase());
-
+str.toLowerCase()
 // toUpperCase()	    把字符串转换为大写。
-console.log(str.toUpperCase());
-
+str.toUpperCase()
 // fixed()				以打字机文本显示字符串。
-console.log(str.fixed());
-
+str.fixed()
 // charAt()	返回在指定位置的字符。
-console.log(str.charAt(0));
-
+str.charAt(0)
 // charCodeAt()	返回在指定的位置的字符的 Unicode 编码。
-console.log(str.charCodeAt(0));
-
+str.charCodeAt(0)
 // concat()	连接字符串。
-console.log(str.concat(new String('Tom')));
-
+str.concat(new String('Tom'))
 // indexOf()	检索字符串
-console.log(str.indexOf('World'));
-
+str.indexOf('World')
 // lastIndexOf()	从后向前搜索字符串。
-console.log(str.lastIndexOf('Hello'));
-
+str.lastIndexOf('Hello')
 // split()	把字符串分割为字符串数组。
 var str3 = "1,2,3,4,6,7";
-console.log(str3.split(','));
-
+str3.split(',')
 // slice()	提取字符串的片断，并在新的字符串中返回被提取的部分。
-console.log(str.slice(6, 11));
-
+str.slice(6, 11)
 // substr()	从起始索引号提取字符串中指定数目的字符。 （不建议使用）
-console.log(str.substr(6, 5));
-
+str.substr(6, 5)
 // substring()	提取字符串中两个指定的索引号之间的字符。
-console.log(str.substring(6, 11));
-
+str.substring(6, 11)
 // replace()	替换与正则表达式匹配的子串。
 // 使用 "Marry" 替换字符串中的 "Tom"：
 var str4 = "Hello Tom!";
-console.log(str4.replace(/Tom/, "Marry"));
-
+str4.replace(/Tom/, "Marry")
 // search()	检索与正则表达式相匹配的值。
-console.log(str.search(/world/i));
-
+str.search(/world/i)
 // match()	找到一个或多个正则表达式的匹配。
 // 如果没有找到任何匹配的文本， match() 将返回 null。否则，它将返回一个数组
 var str5 = "1 + 2 = 3";
-console.log(str5.match(/\d+/g));
-
+str5.match(/\d+/g)
 ```
 
+## 判断回文字符串
 ```js
-// 判断回文字符串
 
 function palindrome(str) {
     // \W匹配任何非单词字符。等价于“[^A-Za-z0-9_]”。
@@ -126,7 +99,10 @@ function palindrome(str) {
     //递归
     return palindrome(lowRegStr.slice(1, lowRegStr.length - 1));
 }
-// 翻转字符串
+```
+
+## 翻转字符串
+```js
 // 1 反向遍历字符串
 function reverseString(str) {
     var tmp = '';
@@ -150,8 +126,10 @@ function reverseString(str) {
     return arr.join("");
 }
 
-// 生成指定长度随机字符串
+```
 
+## 生成指定长度随机字符串
+```js
 function randomString(n) {
     var str = 'abcdefghijklmnopqrstuvwxyz0123456789';
     var tmp = '';
@@ -160,8 +138,10 @@ function randomString(n) {
     }
     return tmp;
 }
+```
 
-// 统计字符串中次数最多字母
+## 统计字符串中次数最多字母
+```js
 function findMaxDuplicateChar(str) {
     if (str.length == 1) {
         return str;
