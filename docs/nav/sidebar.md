@@ -43,6 +43,30 @@
 
 3. [ES6-1](#docs/javascript/3.Advance/ES6/1.基础（一）)
 3. [ES6-2](#docs/javascript/3.Advance/ES6/2.基础（二）)
-3. [ES6-async](#docs/javascript/3.Advance/ES6/async)
 
+### JQuery
+
+4. [select](#docs/javascript/3.Advance/JQuery/jQuery-select)
+4. [选择器](#docs/javascript/3.Advance/JQuery/jQuery-选择器)
+4. [vQuery](#docs/javascript/3.Advance/JQuery/vQuery)
+4. [validate](#docs/javascript/3.Advance/JQuery/[API] jQuery.validate 初始化api)
+4. [validate.addMethod](#docs/javascript/3.Advance/JQuery/[API] jQuery.validate addMethod 验证方法)
+4. [代码段](#docs/javascript/3.Advance/JQuery/[code] 小技巧)
+4. [原生javasricpt 比较-1](#docs/javascript/3.Advance/JQuery/[分析] 1. jQuery 原生javasricpt 比较)
+4. [原生javasricpt 比较-2](#docs/javascript/3.Advance/JQuery/[分析] 2. jQuery 原生javasricpt 比较)
+
+### webpack
+5. [入门](#docs/javascript/3.Advance/webpack/入门)
+
+### angular
+6. [viewValue&dom](#docs/javascript/4.Master/angular/$viewValue和DOM节点的value差别)
+6. [filters](#docs/javascript/4.Master/angular/[基础] angular 过滤器介绍)
+6. [directive](#docs/javascript/4.Master/angular/[基础] angular 内置命令介绍)
+6. [directive.api](#docs/javascript/4.Master/angular/[记录] angular里面directive的详细api入门)
+6. [laydate](#docs/javascript/4.Master/angular/[实现] angular的directive + laydate 实现日期选择器)
+
+### vue
+7. [vue-cli](#docs/javascript/4.Master/vue/[部署] 利用vue-cli 搭建vue项目)
+7. [双向绑定](#docs/javascript/4.Master/vue/[实现]双向绑定)
+7. [vue-vs-react](#docs/javascript/4.Master/vue-vs-react)
 
