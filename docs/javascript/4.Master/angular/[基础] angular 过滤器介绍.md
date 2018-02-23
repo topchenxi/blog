@@ -99,11 +99,6 @@ app.controller('DemoController', ['$scope', '$filter',
 
 `orderBy` -- 用表达式对指定的数组进行排序
 ```html
-{{ 
-    [{'name': 'Ari', 'status': 'awake'},
-    {'name': 'Q', 'status': 'sleeping'},
-    {'name': 'Nate', 'status': 'awake'}] | orderBy:'name' 
-}} 
 <!-- [{"name":"Ari","status":"awake"}, {"name":"Nate","status":"awake"}, {"name":"Q","status":"sleeping"} ] -->
 ```
 
