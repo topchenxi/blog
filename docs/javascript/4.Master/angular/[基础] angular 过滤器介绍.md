@@ -65,7 +65,7 @@ app.controller('DemoController', ['$scope', '$filter',
 
 `json` -- 将一个JSON或JavaScript对象转换成字符串
 ```html
-{{ {'name': 'Ari', 'City': 'SanFrancisco'} | json }} 
+<!-- {{ {'name': 'Ari', 'City': 'SanFrancisco'} | json }}  -->
 <!-- {"name": "Ari", "City": "San Francisco"} -->
 ```
 
