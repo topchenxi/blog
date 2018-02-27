@@ -34,3 +34,32 @@ document.querySelector('p').onclick = function() {
 // onsubmit	提交按钮被点击	
 // onunload	用户退出页面		
 ```
+
+## 元素事件绑定 兼容任何浏览器
+```js
+function eventBind(obj, eventType, callBack) {
+    if (obj.addEventListener) {
+        obj.addEventListener(eventType, callBack, false);
+    } else if (window.attachEvent) {
+        obj.attachEvent('on' + eventType, callBack);
+    } else {
+        obj['on' + eventType] = callBack;
+    }
+};
+eventBind(document, 'click', bodyClick);
+```
+
+## 元素移除事件 兼容任何浏览器
+
+```js
+function moveBind(objId, eventType, callBack) {
+    var obj = document.getElementById(objId);
+    if (obj.removeEventListener) {
+        obj.removeEventListener(eventType, callBack, false);
+    } else if (window.detachEvent) {
+        obj.detachEvent('on' + eventType, callBack);
+    } else {
+        obj['on' + eventType] = null;
+    }
+}
+```

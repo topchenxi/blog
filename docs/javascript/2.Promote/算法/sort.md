@@ -1,3 +1,4 @@
+```js
 // 冒泡排序
 function bubbleSort(arr) {
     var i = 0,
@@ -405,3 +406,4 @@ var sorting = {
         return arr;
     }
 }
+```

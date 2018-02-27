@@ -63,3 +63,54 @@ Date.UTC(2016, 4, 27)
 // setUTCMilliseconds()	根据世界时设置 Date 对象中的毫秒 (0 ~ 999)。
 
 ```
+
+## 时间格式化
+
+```js
+Date.prototype.format = function(formatStr) {
+    var str = formatStr;
+    var Week = ['日', '一', '二', '三', '四', '五', '六'];
+    str = str.replace(/yyyy|YYYY/, this.getFullYear());
+    str = str.replace(/yy|YY/, (this.getYear() % 100) > 9 ? (this.getYear() % 100).toString() : '0' + (this.getYear() % 100));
+    str = str.replace(/MM/, ('0' + (this.getMonth() + 1)).slice(-2));
+    str = str.replace(/M/g, (this.getMonth() + 1));
+    str = str.replace(/w|W/g, Week[this.getDay()]);
+    str = str.replace(/dd|DD/, ('0' + this.getDate()).slice(-2));
+    str = str.replace(/d|D/g, this.getDate());
+    str = str.replace(/hh|HH/, ('0' + this.getHours()).slice(-2));
+    str = str.replace(/h|H/g, this.getHours());
+    str = str.replace(/mm/, ('0' + this.getMinutes()).slice(-2));
+    str = str.replace(/m/g, this.getMinutes());
+    str = str.replace(/ss|SS/, ('0' + this.getSeconds()).slice(-2));
+    str = str.replace(/s|S/g, this.getSeconds());
+    return str
+}
+```
+
+```js
+Date.prototype.format = function(format) {
+    var o = {
+        "M+": this.getMonth() + 1,
+        "d+": this.getDate(),
+        "h+": this.getHours(),
+        "m+": this.getMinutes(),
+        "s+": this.getSeconds(),
+        "q+": Math.floor((this.getMonth() + 3) / 3),
+        "S": this.getMilliseconds()
+    };
+    if (/(y+)/.test(format)) format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o) {
+        if (new RegExp("(" + k + ")").test(format))
+            format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length));
+    }
+    return format;
+}
+```
+
+## n天后的时间
+```js
+function formatDate(n) {
+    var time = new Date().getTime() + n * 1000 * 3600 * 24;
+    return new Date(time);
+}
+```

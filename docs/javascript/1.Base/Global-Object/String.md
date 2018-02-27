@@ -84,6 +84,65 @@ var str5 = "1 + 2 = 3";
 str5.match(/\d+/g)
 ```
 
+## 汉字字符串长度
+```js
+// 返回字符串长度，汉字计数为2
+var strLength = function(srcStr) {
+    if (typeof srcStr !== 'string') srcStr += '';
+    var length = 0;
+    for (var i = 0, len = srcStr.length; i < len; i++) {
+        length += (srcStr.charCodeAt(i) > 255 ? 2 : 1);
+    }
+    return length;
+}
+```
+
+## 字符串长度截取(包括汉字)
+```js
+function cutstr(str, len) {
+    var temp,
+        icount = 0,
+        patrn = /[^\x00-\xff]/,
+        strre = "";
+    for (var i = 0; i < str.length; i++) {
+        if (icount < len - 1) {
+            temp = str.substr(i, 1);
+            if (patrn.exec(temp) == null) {
+                icount = icount + 1
+            } else {
+                icount = icount + 2
+            }
+            strre += temp
+        } else {
+            break;
+        }
+    }
+    return strre + "..."
+}
+```
+
+## 去掉空格
+```js
+String.prototype.Trim = function() {
+    return this.replace(/(^s*)|(s*$)/g, "");
+}
+String.prototype.LTrim = function() {
+    return this.replace(/(^s*)/g, "");
+}
+String.prototype.RTrim = function() {
+    return this.replace(/(s*$)/g, "");
+}
+```
+
+## 字符串替换全部
+```js
+// str:目标字符串 s1：被替换的字符串 s2：替换的字符串
+function strReplaceAll(str, s1, s2) {
+    var myReg = new RegExp(s1, "gm");
+    return str.replace(myReg, s2);
+}
+```
+
 ## 判断回文字符串
 ```js
 
@@ -126,6 +185,9 @@ function reverseString(str) {
     return arr.join("");
 }
 
+function IsReverse(text) {
+    return text.split('').reverse().join('');
+}
 ```
 
 ## 生成指定长度随机字符串
@@ -163,5 +225,17 @@ function findMaxDuplicateChar(str) {
         }
     }
     return maxChar + '：' + maxValue;
+}
+```
+
+## 查找字符串开头与尾部
+```js
+String.prototype.startWith = function(s) {
+    return this.indexOf(s) == 0;
+}
+
+String.prototype.endWith = function(s) {
+    var d = this.length - s.length;
+    return (d >= 0 && this.lastIndexOf(s) == d);
 }
 ```

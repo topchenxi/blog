@@ -54,3 +54,11 @@ Math.tan(Math.PI/4)
 // atan(x)	以介于 -PI/2 与 PI/2 弧度之间的数值来返回 x 的反正切值。
 Math.atan(1)*180/Math.PI
 ```
+
+## 获取一定范围内的随机数
+```js
+function getRandomNumber(m, n) {
+    return Math.random() * (n - m) + m;
+}
+console.log("整数随机数[20-30]:", Math.floor(getRandomNumber(20, 30)));
+```
