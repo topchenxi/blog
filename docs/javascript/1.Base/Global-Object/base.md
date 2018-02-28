@@ -36,3 +36,16 @@ escape("hello") // escape()	对字符串进行编码。
 
 unescape(escape("hello")) // unescape()	对由 escape() 编码的字符串进行解码。
 ```
+
+## 获取链接参数
+```js
+function getUrlParam(name) {
+    // 构造一个含有目标参数的正则表达式对象  
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    // 匹配目标参数  
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    //返回参数值
+    return null;
+}
+```
