@@ -22,7 +22,6 @@
 
 2. [call,apply,bind](#docs/javascript/2.Promote/代码段/call,apply,bind差别)
 2. [code-1](#docs/javascript/2.Promote/代码段/1.常用js代码)
-2. [code-2](#docs/javascript/2.Promote/代码段/2.常用js代码)
 2. [code-3](#docs/javascript/2.Promote/代码段/3.常用js代码)
 2. [console](#docs/javascript/2.Promote/代码段/console)
 2. [cookies](#docs/javascript/2.Promote/代码段/cookies)

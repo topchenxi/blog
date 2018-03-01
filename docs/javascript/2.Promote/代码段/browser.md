@@ -69,3 +69,22 @@ var browser = {
     language: (navigator.browserLanguage || navigator.language).toLowerCase()
 }
 ```
+
+
+## 判断IOS, 安卓
+
+```js
+var u = navigator.userAgent,
+    app = navigator.appVersion;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+```
+
+## UserAgent 判断微信客户端
+```js
+// Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12F70 MicroMessenger/6.1.5 NetType/WIFI
+function isWechat() {
+    var ua = navigator.userAgent.toLowerCase();
+    return /micromessenger/i.test(ua) || /windows phone/i.test(ua);
+}
+```
