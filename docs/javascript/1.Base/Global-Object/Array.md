@@ -64,21 +64,6 @@ arr4.splice(4, 3, 8, 8, 8);
 
 ```
 
-## 数组去重
-```js
-function unique(arr) {
-    var obj = {}
-    var result = []
-    for (var i in arr) {
-        if (!obj[arr[i]]) {
-            obj[arr[i]] = true;
-            result.push(arr[i]);
-        }
-    }
-    return result;
-}
-```
-
 ## 数组中最大差值
 ```js
 function getMaxProfit(arr) {
@@ -90,4 +75,73 @@ function getMaxProfit(arr) {
     }
     return max - min;
 }
+```
+
+## 数组去重1
+```js
+/*
+    1.构建一个新的数组存放结果
+    2.for循环中每次从原数组中取出一个元素，用这个元素循环与结果数组对比
+    3.若结果数组中没有该元素，则存到结果数组中
+
+*/
+function unique_method1(array) {
+    var tmpArray = [array[0]];
+    for (var i = 1, len = array.length; i < len; i++) {
+        var flag = false;
+        for (var j = 0, tmpLen = tmpArray.length; j < tmpLen; j++) {
+            if (array[i] == tmpArray[j]) {
+                flag = true;
+                break;
+            }
+        }
+        if (!flag) {
+            tmpArray.push(array[i])
+        }
+    }
+    return tmpArray;
+}
+```
+## 数组去重2
+```js
+/*
+    1.创建一个新的数组存放结果,创建一个空对象来记录存放
+    2.for循环时，每次取出一个元素与记录存放进行对比，如果这个元素不重复，
+        则把它存放到结果数组中，并在对象中记录下来。
+*/
+function unique_method2(array) {
+    var tmpArray = [];
+    var tmpObj = {};
+    for (var i = 0, len = array.length; i < len; i++) {
+        if (!tmpObj[array[i]]) {
+            tmpArray.push(array[i]);
+            tmpObj[array[i]] = 1;
+        }
+    }
+    return tmpArray;
+}
+```
+## 数组去重3
+```js
+/*
+    1.先将原数组进行排序
+    2.检查原数组中的第i个元素 与 结果数组中的最后一个元素是否相同，
+      因为已经排序，所以重复元素会在相邻位置
+    3.如果不相同，则将该元素存入结果数组中
+*/
+function unique_method3(array) {
+    array.sort();
+    var tmpArray = [array[0]];
+    for (var i = 1, len = array.length; i < len; i++) {
+        if (array[i] !== tmpArray[tmpArray.length - 1]) {
+            tmpArray.push(array[i]);
+        }
+    }
+    return tmpArray;
+}
+```
+
+## 数组去重4 (jquery 去重)
+```js
+$.unique
 ```

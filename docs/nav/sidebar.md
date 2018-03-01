@@ -15,6 +15,7 @@
 1. [Date](#docs/javascript/1.Base/Global-Object/Date)
 1. [RegExp](#docs/javascript/1.Base/Global-Object/RegExp)
 1. [Global](#docs/javascript/1.Base/Global-Object/base)
+1. [Object](#docs/javascript/1.Base/Global-Object/Object)
 1. [缩写技巧](#docs/javascript/1.Base/javascript-缩写技巧)
 1. [注意事项](#docs/javascript/1.Base/javascript-注意事项)
 
@@ -23,12 +24,9 @@
 2. [call,apply,bind](#docs/javascript/2.Promote/代码段/call,apply,bind差别)
 2. [code-1](#docs/javascript/2.Promote/代码段/1.常用js代码)
 2. [code-3](#docs/javascript/2.Promote/代码段/3.常用js代码)
-2. [console](#docs/javascript/2.Promote/代码段/console)
 2. [cookies](#docs/javascript/2.Promote/代码段/cookies)
-2. [userAgent](#docs/javascript/2.Promote/代码段/userAgent)
 2. [browser](#docs/javascript/2.Promote/代码段/browser)
 2. [sort](#docs/javascript/2.Promote/算法/sort)
-2. [去重](#docs/javascript/2.Promote/算法/去重)
 2. [object遍历](#docs/javascript/2.Promote/原型和闭包/object遍历)
 2. [object](#docs/javascript/2.Promote/原型和闭包/1.object)
 2. [prototype和__proto__](#docs/javascript/2.Promote/原型和闭包/2.prototype和__proto__)
@@ -37,6 +35,7 @@
 2. [作用域](#docs/javascript/2.Promote/原型和闭包/5.作用域)
 2. [闭包](#docs/javascript/2.Promote/原型和闭包/6.闭包)
 2. [常用正则表达式](#docs/javascript/2.Promote/正则表达式/常用正则表达式)
+2. [console](#docs/javascript/2.Promote/代码段/console)
 
 ### js - Advance
 
@@ -51,8 +50,7 @@
 4. [validate](#docs/javascript/3.Advance/JQuery/[API] jQuery.validate 初始化api)
 4. [validate.addMethod](#docs/javascript/3.Advance/JQuery/[API] jQuery.validate addMethod 验证方法)
 4. [代码段](#docs/javascript/3.Advance/JQuery/[code] 小技巧)
-4. [原生javasricpt 比较-1](#docs/javascript/3.Advance/JQuery/[分析] 1. jQuery 原生javasricpt 比较)
-4. [原生javasricpt 比较-2](#docs/javascript/3.Advance/JQuery/[分析] 2. jQuery 原生javasricpt 比较)
+4. [jQuery vs native](#docs/javascript/3.Advance/JQuery/[分析] 1. jQuery 原生javasricpt 比较)
 
 ### webpack
 5. [入门](#docs/javascript/3.Advance/webpack/入门)
