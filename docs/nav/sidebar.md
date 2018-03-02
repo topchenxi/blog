@@ -67,3 +67,7 @@
 7. [双向绑定](#docs/javascript/4.Master/vue/[实现]双向绑定)
 7. [vue-vs-react](#docs/javascript/4.Master/vue-vs-react)
 
+### awesome
+8. [jQuery](#docs/javascript/5.Awesome/jQuery)
+8. [vue](#docs/javascript/5.Awesome/vue)
+8. [ui](#docs/javascript/5.Awesome/ui)
