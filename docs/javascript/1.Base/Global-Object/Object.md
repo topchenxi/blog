@@ -141,3 +141,27 @@ function getType(a) {
     return typeArray[1].slice(0, this.length - 1);
 }
 ```
+```js
+function isType(type) {
+    return function(obj) {
+        return Object.prototype.toString.call(obj) === "[object " + type + "]";
+    }
+}
+```
+
+## 遍历对象
+```js
+function each(obj, callback) {
+    var prop;
+    if (!(isFunction(callback) && isObject(obj)))
+        return obj;
+
+    for (prop in obj) {
+        if (!obj.hasOwnProperty(prop))
+            continue;
+
+        if (callback(prop, obj[prop], obj))
+            break;
+    }
+}
+```

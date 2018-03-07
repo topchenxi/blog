@@ -63,6 +63,20 @@ arr4.splice(4, 3, 8, 8, 8);
 // valueOf() 返回数组对象的原始值
 
 ```
+## 遍历数组
+```js
+function arrayEach(arr, callback) {
+    var i, len;
+
+    if (!(isArray(arr) && arr.length > 0 && isFunction(callback)))
+        return arr;
+
+    for (i = 0, len = arr.length; i < len; i++) {
+        if (callback(i, arr[i], arr))
+            break;
+    }
+}
+```
 
 ## 数组中最大差值
 ```js
