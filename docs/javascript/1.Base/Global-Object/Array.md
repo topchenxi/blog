@@ -91,7 +91,7 @@ function getMaxProfit(arr) {
 }
 ```
 
-## 数组去重1
+## 数组去重
 ```js
 /*
     1.构建一个新的数组存放结果
@@ -116,7 +116,6 @@ function unique_method1(array) {
     return tmpArray;
 }
 ```
-## 数组去重2
 ```js
 /*
     1.创建一个新的数组存放结果,创建一个空对象来记录存放
@@ -135,7 +134,6 @@ function unique_method2(array) {
     return tmpArray;
 }
 ```
-## 数组去重3
 ```js
 /*
     1.先将原数组进行排序
@@ -155,7 +153,75 @@ function unique_method3(array) {
 }
 ```
 
-## 数组去重4 (jquery 去重)
 ```js
+// es6
+function unique_method4(arr) {
+    return arr.filter(function(item, index, self) {
+        return self.indexOf(item) === index;
+    });
+}
+```
+
+```js
+//(jquery 去重)
 $.unique
+```
+
+## 数组顺序打乱
+```js
+function upsetArr(arr) {
+    return arr.sort(function() {
+        return Math.random() - 0.5
+    });
+}
+```
+
+## 数组最大值最小值
+```js
+// 最大值
+function maxArr(arr) {
+    return Math.max.apply(null, arr);
+}
+// 最小值
+function minArr(arr) {
+    return Math.min.apply(null, arr);
+}
+```
+
+## 数组求和，平均值
+```js
+function sumArr(arr) {
+    return arr.reduce(function(pre, cur) {
+        return pre + cur
+    })
+}
+
+function covArr(arr) {
+    return this.sumArr(arr) / arr.length;
+}
+// es6
+const average = arr => arr.reduce((acc, val) => acc + val, 0) / arr.length;
+```
+
+## 数组扁平化
+```js
+function steamroller(arr) {
+    var newArr = []
+    for (var i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            newArr.push.apply(newArr, steamroller(arr[i]));
+        } else {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+```
+
+## 数组之间的区别
+```js
+const difference = (a, b) => {
+    const s = new Set(b);
+    return a.filter(x => !s.has(x));
+};
 ```

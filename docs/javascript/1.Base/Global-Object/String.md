@@ -239,3 +239,59 @@ String.prototype.endWith = function(s) {
     return (d >= 0 && this.lastIndexOf(s) == d);
 }
 ```
+
+## 正则校验
+```js
+function checkType(str, type) {
+    switch (type) {
+        case 'email':
+            return /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/.test(str);
+        case 'phone':
+            return /^1[3|4|5|7|8][0-9]{9}$/.test(str);
+        case 'tel':
+            return /^(0\d{2,3}-\d{7,8})(-\d{1,4})?$/.test(str);
+        case 'number':
+            return /^[0-9]$/.test(str);
+        case 'english':
+            return /^[a-zA-Z]+$/.test(str);
+        case 'text':
+            return /^\w+$/.test(str);
+        case 'chinese':
+            return /^[\u4E00-\u9FA5]+$/.test(str);
+        case 'lower':
+            return /^[a-z]+$/.test(str);
+        case 'upper':
+            return /^[A-Z]+$/.test(str);
+        default:
+            return true;
+    }
+}
+```
+
+## 统计单词出现次数
+```js
+function countStr(str, word) {
+    return str.split(word).length - 1
+}
+```
+
+## 格式化处理字符串
+```js
+function formatText(str, size, delimiter) {
+    var _size = size || 3,
+        _delimiter = delimiter || ',';
+    var regText = '\\B(?=(\\w{' + _size + '})+(?!\\w))';
+    var reg = new RegExp(regText, 'g');
+    return str.replace(reg, _delimiter);
+}
+
+formatText('105421542',3,',') // 105,421,542
+
+/\B(?=(\d{3})+(?!\d))/g
+
+// 1. /\B(?=(\d{3})+(?!\d))/g：正则匹配边界\B，边界后面必须跟着(\d{3})+(?!\d);
+// 2. (\d{3})+：必须是1个或多个的3个连续数字;
+// 3. (?!\d)：第2步中的3个数字不允许后面跟着数字;
+// 4. (\d{3})+(?!\d)：所以匹配的边界后面必须跟着3*n（n>=1）的数字。
+
+```
