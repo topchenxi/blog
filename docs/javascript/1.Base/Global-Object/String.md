@@ -295,3 +295,9 @@ formatText('105421542',3,',') // 105,421,542
 // 4. (\d{3})+(?!\d)：所以匹配的边界后面必须跟着3*n（n>=1）的数字。
 
 ```
+
+## 按字符串排序
+```js
+// 按字母顺序排列
+const sortCharactersInString = str => str.split('').sort((a, b) => a.localeCompare(b)).join('');
+```

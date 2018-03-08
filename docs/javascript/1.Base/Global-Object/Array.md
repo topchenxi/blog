@@ -93,6 +93,10 @@ function getMaxProfit(arr) {
 
 ## 数组去重
 ```js
+const unique = arr => [...new Set(arr)];
+```
+
+```js
 /*
     1.构建一个新的数组存放结果
     2.for循环中每次从原数组中取出一个元素，用这个元素循环与结果数组对比

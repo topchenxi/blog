@@ -459,3 +459,14 @@ document.close()   //不安比open方法所新建的文档
 document.write()   //用于向当前文档写入内容
 document.writeIn()  //用于向当前文档写入内容，尾部添加换行符。
 ```
+
+## 滚动到顶部s
+```js
+const scrollToTop = _ => {
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    if (c > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, c - c / 8);
+    }
+};
+```

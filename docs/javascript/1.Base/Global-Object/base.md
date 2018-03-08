@@ -49,3 +49,18 @@ function getUrlParam(name) {
     return null;
 }
 ```
+
+```js
+const getUrlParameters = url => url.match(/([^?=&]+)(=([^&]*))/g).reduce(
+    (a, v) => (
+        a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1), a
+    ), {}
+);
+// console.log(getUrlParameters('http://baidu.com?a=1&b=2&c=3')) 
+// {a: "1", b: "2", c: "3"}
+```
+
+## 验证数字
+```js
+const validateNumber = n => !isNaN(parseFloat(n)) && isFinite(n) && Number(n) == n;
+```
