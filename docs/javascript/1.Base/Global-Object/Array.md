@@ -221,6 +221,10 @@ function steamroller(arr) {
     return newArr;
 }
 ```
+```js
+const deepFlatten = arr => [].concat(...arr.map(v => Array.isArray(v) ? deepFlatten(v) : v));
+// deepFlatten([1,[2],[[3],4],5]) -> [1,2,3,4,5]
+```
 
 ## 数组之间的区别
 ```js
@@ -228,4 +232,17 @@ const difference = (a, b) => {
     const s = new Set(b);
     return a.filter(x => !s.has(x));
 };
+```
+
+## 数组拼接
+```js
+const ArrayConcat = (arr, ...args) => [].concat(arr, ...args);
+// console.log(ArrayConcat([1, 2], [3, 4]))
+// console.log([...[1, 2], ...[3, 4]])
+```
+
+## 数组合集
+```js
+const union = (a, b) => Array.from(new Set([...a, ...b]));
+// union([1,2,3], [4,3,2]) -> [1,2,3,4]
 ```

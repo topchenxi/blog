@@ -470,3 +470,33 @@ const scrollToTop = _ => {
     }
 };
 ```
+
+## 页面的底部是否可见
+```js
+const bottomVisible = _ =>
+    document.documentElement.clientHeight + window.scrollY >= document.documentElement.scrollHeight || document.documentElement.clientHeight;
+// bottomVisible() -> true
+```
+
+## 判断元素是否在可视窗口可见
+```js
+const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
+  const { top, left, bottom, right } = el.getBoundingClientRect();
+  return partiallyVisible
+    ? ((top > 0 && top < innerHeight) || (bottom > 0 && bottom < innerHeight)) &&
+      ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+    : top >= 0 && left >= 0 && bottom < = innerHeight && right <= innerWidth;
+};
+// 举个例子，有一个 100x100 可视窗口， 和一个 10x10px 元素定位在 {top: -1, left: 0, bottom: 9, right: 10}
+// elementIsVisibleInViewport(el) -> false (not fully visible)
+// elementIsVisibleInViewport(el, true) -> true (partially visible)
+```
+
+## 获取滚动条位置
+```js
+const getScrollPos = (el = window) => ({
+    x: (el.pageXOffset !== undefined) ? el.pageXOffset : el.scrollLeft,
+    y: (el.pageYOffset !== undefined) ? el.pageYOffset : el.scrollTop
+});
+// getScrollPos() -> {x: 0, y: 200}
+```
