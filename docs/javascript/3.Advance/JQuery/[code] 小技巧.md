@@ -77,6 +77,36 @@ $('img').load(function() {
 });
 
 ```
+## 获取图片实际渲染宽度和高度
+```js
+$("img").width(); // 获取实际渲染宽度  
+$("img").height(); // 获取实际渲染高度
+
+// native
+// 1
+document.getElementsByTagName("img")[0].width; // 获取实际渲染宽度
+document.getElementsByTagName("img")[0].height; // 获取实际渲染高度
+
+// 2
+document.getElementsByTagName("img")[0].offsetWidth; // 获取实际渲染宽度  
+document.getElementsByTagName("img")[0].offsetHeight; // 获取实际渲染高度
+
+// 3 naturalWidth & naturalHeight
+window.onload = function() {
+    function getNaturalSize(img) {　　　　　　　　　
+        if (window.naturalWidth && window.naturalHeight) {
+            naturalWidth = img.naturalWidth;
+        } else {
+            // 兼容IE8及以下版本
+            var image = new Image();
+            image.src = img.src;
+            var naturalWidth = image.width;
+        }
+        return naturalWidth;
+    }
+    var natural = document.getElementById('img');
+}
+```
 ## 自动修改破损图像
 ```js
 $('img').on('error', function() {
@@ -187,3 +217,4 @@ $(document).ready(function() {
     var $jq = jQuery.noConflict();
     $jq('#id').show();
 });
+```
