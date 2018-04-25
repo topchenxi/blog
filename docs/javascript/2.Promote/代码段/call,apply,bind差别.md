@@ -44,12 +44,12 @@ xw.say.bind(xh, "实验小学", "六年级")(); // 小红 , 女 ,今年18 ,在�
 ## bind 的实现
 
 ```js
-Function.prototype.bind = function(context){
-  self = this;  //保存this，即调用bind方法的目标函数
-  return function(){
-      return self.apply(context,arguments);
-  };
-};
+Function.prototype.bind = Function.prototype.bind || function(context) {
+    var self = this;
+    return function() {
+        return self.apply(context, arguments);
+    };
+}
 ```
 
 函数柯里化

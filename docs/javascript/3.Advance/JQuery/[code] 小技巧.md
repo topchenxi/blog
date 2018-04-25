@@ -1,5 +1,15 @@
 # jQuery 代码段
 
+## jquery操作checkBox 一次取消选中后不能再选中
+```js
+$("input[type='checkbox']").each(function() {
+    this.checked = true;
+});
+
+// 原因是 （jquery1.9以上，checkbox attr不能重复操作）可使用prop代替
+$(selector).prop("checked","checked");  
+```
+
 ## 禁止右键点击
 ```js
 $(document).ready(function() {

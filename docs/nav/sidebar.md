@@ -75,6 +75,7 @@
 ### wap
 
 9. [flexible](#docs/javascript/6.Wap/flexible)
+9. [注意事项](#docs/javascript/6.Wap/mind)
 
 ### css
 
@@ -82,3 +83,4 @@
 10. [less](#docs/css/2.Promote/less) 
 10. [stylus](#docs/css/2.Promote/stylus) 
 10. [三者区别](#docs/css/2.Promote/diff) 
+10. [正方形](#docs/css/2.Promote/square) 
