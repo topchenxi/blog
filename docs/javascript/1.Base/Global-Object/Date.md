@@ -134,3 +134,25 @@ function getEndTime(endTime) {
     return "剩余时间" + d + "天 " + h + "小时 " + m + " 分钟" + s + " 秒";
 }
 ```
+
+## new Date 浏览器兼容性
+
+```js
+new Date('2017-05-01');
+// 在低版本的firefox 和 ios系统里面，这样的写法是返回NaN
+// '2017-09-05'是无法被各个浏览器中，使用new Date(str)来正确生成日期对象的。 正确的用法是'2017/09/06'.
+
+// 正确写法
+new Date('2017-05-02'.replace(/-/g, "/"));
+// 或
+function getDateForStringDate(strDate) {
+    //切割年月日与时分秒称为数组
+    var s = strDate.split(" ");
+    var s1 = s[0].split("-");
+    var s2 = s[1].split(":");
+    if (s2.length == 2) {
+        s2.push("00");
+    }
+    return new Date(s1[0], s1[1] - 1, s1[2], s2[0], s2[1], s2[2]);
+}
+```

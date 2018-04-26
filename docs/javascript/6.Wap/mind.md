@@ -61,3 +61,81 @@ img {
     -webkit-touch-callout: none;
 }
 ```
+
+## ios竖屏拍照上传，图片被旋转问题
+
+上传前使用压缩工具 [lrz](https://github.com/think2011/localResizeIMG) `(推荐)`
+
+或者
+```
+1.通过第三方插件exif-js获取到图片的方向
+2.new一个FileReader对象，加载读取上传的图片
+3.在fileReader的onload函数中，得到的图片文件用一个Image对象接收
+4.在image的onload函数中，利用步骤1中获取到的方向orientation，通过canvas旋转校正，重新绘制一张新图
+注意iPhone有3个拍照方向需要处理，横屏拍摄，home键在左侧，竖屏拍摄，home建上下
+5.将绘制的新图转成Blob对象，添加到FormData对象中，然后进行校正后的上传操作
+```
+
+## ios：DOM元素固定一边，另一边滚动，滚动很卡的问题
+```css
+.class{
+    /* (横向滚动用的多些)简单粗暴的办法，样式添加如下属性 */
+    -webkit-overflow-scrolling: touch;
+}
+```
+
+## 部分手机第三方输入法会将页面网上挤的问题
+```js
+// 特定需求页面，比如评论页面，输入框在顶部之类的
+const interval = setInterval(function() {
+    document.body.scrollTop = 0;
+}, 100)
+// 注意关闭页面或者销毁组件的时候记得清空定时器
+clearInterval(interval);
+```
+
+## iPhoneX适配
+```html
+<!-- 1.viewport meta 标签增加属性viewport-fit=cover -->
+<meta name="viewport" content="width=device-width, viewport-fit=cover, xxxx">
+```
+
+```css
+/* 2.body元素增加样式 */
+body {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+/* 3.如有fixed底部的元素，也增加上面样式 */
+xxx {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: #fff; 
+  /* 记得添加background-color，不然会出现透明镂空的情况 */
+}
+```
+
+## flex对低版本的ios和Android的支持问题
+```js
+// 使用postcss的autoprefixer插件，自动添加浏览器内核前缀，
+// 并且增加更低浏览器版本的配置，自动添加flex老版本的属性和写法
+autoprefixer({
+    browsers: [
+        'iOS >= 6', // 特殊处理支持低版本IOS
+        'Safari >= 6', // 特殊处理支持低版本Safari
+    ]
+})
+```
+
+## ios 日期转换NAN的问题
+```js
+// 将日期字符串的格式符号替换成'/'。
+'yyyy-MM-dd'.replace(/-/g, '/')
+```
+
+## 某些机型不支持video标签的poster属性，特别是安卓
+```
+用图片元素 <img />来代替poster
+播放前显示<img />，隐藏 <video />
+播放后显示<video />，隐藏 <img />
+```

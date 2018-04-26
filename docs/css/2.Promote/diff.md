@@ -78,7 +78,7 @@ strong
   color: red
 ```
 
-## @import
+## import
 
 Less 中可以在字符串中进行插值：
 ```css
