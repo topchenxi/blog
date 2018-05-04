@@ -15,6 +15,7 @@
 |---------|
 |[element-ui](http://element-cn.eleme.io/#/zh-CN)|
 |[iview](https://www.iviewui.com/)|
+|[vue-beauty](https://github.com/FE-Driver/vue-beauty)|
 
 ## ui库 - wap
 
@@ -23,6 +24,7 @@
 |[Mint UI](http://mint-ui.github.io/#!/zh-cn)|
 |[Muse UI](http://www.muse-ui.org/#/index)|
 |[Vant](https://www.youzanyun.com/zanui/vant#/zh-CN/intro)|
+|[VUX](https://doc.vux.li/zh-CN/)|
 
 
 ## demo - pc

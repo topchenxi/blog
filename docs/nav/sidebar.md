@@ -63,6 +63,7 @@
 7. [双向绑定](#docs/javascript/4.Master/vue/[实现]双向绑定)
 7. [vue-vs-react](#docs/javascript/4.Master/vue-vs-react)
 7. [defineProperty](#docs/javascript/4.Master/vue/defineProperty)
+7. [vue入门](#docs/javascript/4.Master/vue/learn)
 
 ### awesome
 8. [jQuery](#docs/javascript/5.Awesome/jQuery)
