@@ -92,3 +92,11 @@ install : common options: [-S|--save|-D|--save-dev|-O|--save-optional] [-E|--sav
 - npm t – 运行测试
 - npm ls – 罗列已经安装包
 - npm ll or npm la – 罗列包时显示额外信息
+
+## node npm 升级
+node 升级直接方便还是去[官网]() 下载exe好
+
+npm 升级
+```bash
+npm install -g npm
+```

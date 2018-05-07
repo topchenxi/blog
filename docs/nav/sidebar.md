@@ -64,6 +64,8 @@
 7. [vue-vs-react](#docs/javascript/4.Master/vue-vs-react)
 7. [defineProperty](#docs/javascript/4.Master/vue/defineProperty)
 7. [vue入门](#docs/javascript/4.Master/vue/learn)
+7. [vue源码](#docs/javascript/4.Master/vue/vue_code)
+7. [vue脱坑](#docs/javascript/4.Master/vue/remind)
 
 ### awesome
 8. [jQuery](#docs/javascript/5.Awesome/jQuery)
