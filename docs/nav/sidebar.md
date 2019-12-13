@@ -1,5 +1,14 @@
 ## 目录
 
+### awesome
+8. [bolg](#docs/javascript/5.Awesome/bolg)
+8. [jQuery](#docs/javascript/5.Awesome/jQuery)
+8. [vue](#docs/javascript/5.Awesome/vue)
+8. [react](#docs/javascript/5.Awesome/react)
+8. [Angular](#docs/javascript/5.Awesome/Angular)
+8. [ui](#docs/javascript/5.Awesome/ui)
+8. [手机端](#docs/javascript/5.Awesome/h5)
+
 ### js - base
 
 1. [Dom](#docs/javascript/1.Base/Dom/dom)
@@ -66,14 +75,6 @@
 7. [vue入门](#docs/javascript/4.Master/vue/learn)
 7. [vue源码](#docs/javascript/4.Master/vue/vue_code)
 7. [vue脱坑](#docs/javascript/4.Master/vue/remind)
-
-### awesome
-8. [jQuery](#docs/javascript/5.Awesome/jQuery)
-8. [vue](#docs/javascript/5.Awesome/vue)
-8. [react](#docs/javascript/5.Awesome/react)
-8. [Angular](#docs/javascript/5.Awesome/Angular)
-8. [ui](#docs/javascript/5.Awesome/ui)
-8. [手机端](#docs/javascript/5.Awesome/h5)
 
 ### wap
 

@@ -7,6 +7,7 @@
 |[vue.js](https://cn.vuejs.org/)|
 |[vue-router](https://router.vuejs.org/zh-cn/)|
 |[vuex](https://router.vuejs.org/zh-cn/)|
+|[vue-cli](https://cli.vuejs.org/zh/guide/)|
 |[weex](http://weex.apache.org/)|
 
 ## ui库 - pc
@@ -25,7 +26,12 @@
 |[Muse UI](http://www.muse-ui.org/#/index)|
 |[Vant](https://www.youzanyun.com/zanui/vant#/zh-CN/intro)|
 |[VUX](https://doc.vux.li/zh-CN/)|
+|[NutUI](https://nutui.jd.com/#/index)|
 
+## 组件
+|介绍 |
+|---------|
+|[v-charts](https://v-charts.js.org/#/)|
 
 ## demo - pc
 

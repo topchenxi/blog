@@ -6,6 +6,7 @@
 |---------|---------|
 |弹窗|[layer - PC](http://layer.layui.com/)       |
 |弹窗|[layer - mobile](http://layer.layui.com/mobile/)      |
+|弹窗|[sweetalert](http://mishengqiang.com/sweetalert/)    |
 |编辑器|[UEditor](http://ueditor.baidu.com/website/onlinedemo.html)     |
 |编辑器|[UMeditor](http://ueditor.baidu.com/website/umeditor.html)     |
 |编辑器|[wangEditor](http://www.wangeditor.com/)     |
@@ -17,12 +18,14 @@
 |轮播|[swiper](http://www.swiper.com.cn/)    |
 |轮播|[superslide2](http://www.superslide2.com/)    |
 |滚动刷新|[mescroll](http://www.mescroll.com/)    |
+|时间|[momentjs](http://momentjs.cn/)    |
 
 ## css 组件
 | 介绍 | 地址 |
 |---------|---------|
 |ui|[Bootstrap](http://www.bootcss.com/) |
 |动画|[animate.css](https://daneden.github.io/animate.css/) |
+|样式|[mui](https://dev.dcloud.net.cn/mui/) |
 
 
 
